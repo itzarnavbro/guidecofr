@@ -20,7 +20,7 @@ import FreeChatPage from './src/freeChatPage';
 const Stack = createNativeStackNavigator();
 
 // Define the initial route here
-const initialRoute = "ChatWindow"; // Change this value to set a different initial route
+const initialRoute = "GenderPage"; // Change this value to set a different initial route
 
 export default function App() {
   return (
