@@ -22,9 +22,6 @@ import FreeChatPage from './src/freeChatPage';
 
 const Stack = createNativeStackNavigator();
 
-// Define the initial route here
-const initialRoute = "ChatWindow"; // Change this value to set a different initial route
-
 
 export default function App() {
   const [initialRoute, setInitialRoute] = useState<string | null>(null);
@@ -33,6 +30,7 @@ export default function App() {
     const loadInitialRoute = async () => {
       try {
         const storedRoute = await AsyncStorage.getItem('initialRoute');
+        console.log('Stored initial route:', storedRoute);
         setInitialRoute(storedRoute || 'AuthPage'); // Default to 'AuthPage' if no value is stored
       } catch (error) {
         console.error('Failed to load initial route:', error);
@@ -41,6 +39,7 @@ export default function App() {
     };
 
     loadInitialRoute();
+    AsyncStorage.setItem('initialRoute', 'NamePage'); // Set default route on first load
   }, []);
 
   if (!initialRoute) {
