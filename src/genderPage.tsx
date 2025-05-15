@@ -1,12 +1,27 @@
 import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 const GenderPage: React.FC = () => {
     return (
-        <div>
-            <h1>Gender Page</h1>
+        <View style={styles.container}>
+            <Text style={styles.header}>Gender Page</Text>
             {/* Add your content here */}
-        </div>
+        </View>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+    },
+    header: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 16,
+    },
+});
 
 export default GenderPage;

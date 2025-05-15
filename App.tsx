@@ -19,38 +19,40 @@ import FreeChatPage from './src/freeChatPage';
 
 const Stack = createNativeStackNavigator();
 
+// Define the initial route here
+const initialRoute = "ChatWindow"; // Change this value to set a different initial route
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Auth">
+      <Stack.Navigator initialRouteName={initialRoute}>
         <Stack.Screen
-          name="Auth"
+          name="AuthPage"
           component={AuthPage}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Chat"
+          name="ChatWindow"
           component={ChatWindow}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Name"
+          name="NamePage"
           component={NamePage}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Gender"
+          name="GenderPage"
           component={GenderPage}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Coaches"
+          name="CoachesList"
           component={CoachList}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="FreeChat"
+          name="FreeChatPage"
           component={FreeChatPage}
           options={{ headerShown: false }}
         />

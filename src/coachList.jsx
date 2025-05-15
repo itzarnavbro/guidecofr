@@ -1,12 +1,27 @@
 import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 const CoachList = () => {
     return (
-        <div>
-            <h2>Coach List</h2>
+        <View style={styles.container}>
+            <Text style={styles.header}>Coach List</Text>
             {/* Add coach list content here */}
-        </div>
+        </View>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+    },
+    header: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        marginBottom: 16,
+    },
+});
 
 export default CoachList;
